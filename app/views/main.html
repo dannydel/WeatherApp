@@ -1,0 +1,36 @@
+<div class="lead">
+  <h1 class="jumbotron"> My Weather App <i class="glyphicon glyphicon-cloud"></i> </h1>
+  <br />
+  <div class="row">
+  <div class="col-lg-6">
+    <div class="input-group">
+      <span class="input-group-btn">
+        <button ng-click="fetch(zipCode)" class="btn btn-default" type="submit">Fetch!</button>
+      </span>
+      <input ng-keyup="$event.keyCode == 13 && fetch(zipCode)" type="text" class="form-control" ng-model="zipCode" placeholder="Enter Zip Code...">
+    </div><!-- /input-group -->
+  </div><!-- /.col-lg-6 -->
+  <br />
+  <br />
+  <h4>City: {{myWeather.name}}</h4>
+  <div class="row">
+    <div class="col-xs-4 col-sm-4">
+      <p>Conditions:   <span style="color:#5F9EA0"> {{ myWeather.weather[0].main }} </span></p>
+      <p>Description: <span style="color:#5F9EA0"> {{myWeather.weather[0].description}}</span></p>
+      <p>Current Temp: <span style="color:#5F9EA0"> {{ myWeather.main.temp }} </span> </p>
+      <p>Min Temp:     <span style="color:#5F9EA0"> {{ myWeather.main.temp_min }} </span> </p>
+      <p>Max Temp:     <span style="color:#5F9EA0"> {{ myWeather.main.temp_max }} </span> </p>
+      <p></p>
+    </div>
+  <div class="col-xs-8 col-sm-4">
+    <!-- Temp Pictures -->
+
+    <img src="{{ImagePath}}" />
+
+
+
+  </div>
+
+  </div>
+
+</div>
